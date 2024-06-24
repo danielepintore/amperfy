@@ -19,13 +19,13 @@ public class PlayWidgetData: Codable {
         guard (song != nil) else {
             self.songName = "Song Name"
             self.songArtist = "Artist"
-            self.image = UIImage.songArtwork.pngData()
+            self.image = UIImage.blueSong.pngData()
             self.isPlaying = false
             return
         }
         self.songName = song?.name ?? "Song Name"
         self.songArtist = song?.artist?.name ?? "Artist"
-        self.image = song?.artwork?.image?.pngData() ?? UIImage.songArtwork.pngData()
+        self.image = song?.artwork?.image?.pngData() ?? UIImage.blueSong.pngData()
         self.isPlaying = isPlaying
     }
 }
